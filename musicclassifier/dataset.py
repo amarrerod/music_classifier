@@ -7,9 +7,12 @@ from sklearn.utils import shuffle
 class Dataset():
     def __init__(self, file='./data/music_data.csv'):
         self.data = pd.read_csv('./data/music_data.csv')
-        self.data = shuffle(self.data)
+        self.data = self.data.drop(columns='filename')
         self.features = list(self.data.columns)
-        self.features.remove('filename')
+        
+    def shuffle(self):
+        return shuffle(self.data)
+
     def plot_features(self):
         # for f in self.features[0:-1]:
         #     figure, axis = plt.subplots(figsize=(20, 10))

@@ -17,3 +17,5 @@ class Test_Dataset(unittest.TestCase):
         self.assertTrue(self.dataset.plot_features())
     def test_data_rows_are_1001(self):
         self.assertTrue(1001, len(self.dataset.data))
+    def test_data_shuffle(self):
+        self.assertEqual(len(self.dataset.shuffle()), len(self.dataset.data))
