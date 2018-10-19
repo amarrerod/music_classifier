@@ -12,7 +12,7 @@ from shutil import rmtree
 from setuptools import find_packages, setup, Command
 
 # Package meta-data.
-NAME = 'music classifier'
+NAME = 'musicclassifier'
 DESCRIPTION = 'Music Classifier'
 URL = 'https://github.com/marreA/music_classifier'
 EMAIL = 'alemarrerodiaz@gmail.com'
